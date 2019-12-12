@@ -1,0 +1,27 @@
+To get ACCOUNT working in your local dev
+
+1. composer install < installs all required PHP packaged
+2. npm i < installs all required node packages
+3. cp .env.example .env < copy .env.exmaple file to .env file
+4. php artisan key:generate < generate your app key
+5. edit .env file in root directory to set your database credentials
+
+DB_DATABASE=
+
+DB_USERNAME=
+
+DB_PASSWORD=
+
+6. php artisan migrate < migrate you database
+7. php artisan passport:install < generate oauth2 encryption keys
+8. edit .env file in root directory to set your environment oauth2 credentials
+
+CLIENT_ID="your-password-grant-client-id"
+
+CLIENT_SECRET="your-password-grant-client-secret"
+
+9. if you're setting up virtualhost, change APP_URL in .env file also accordingly
+
+10. npm run development < to compile code for development
+11. npm run production < to compile code for production (minifies css and js)
+12. npm run watch < to compile code for development, and start watching for changes
